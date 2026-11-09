@@ -1,0 +1,16 @@
+# GeoSemTwin-X (install PyTorch with CUDA first - see setup.sh / README)
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+opencv-python>=4.8
+open3d>=0.19
+plotly>=5.20
+transformers>=4.45
+huggingface_hub>=0.24
+pillow
+psutil
+tabulate
+pyyaml
+nbformat
+sam2>=1.1
