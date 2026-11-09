@@ -1,0 +1,19 @@
+# GeoSemTwin-X node fed by ros2/dataset_player.py (dataset:=staer)
+geosemtwinx:
+  ros__parameters:
+    rgb_topic: /dataset/rgb
+    depth_topic: /dataset/depth
+    camera_info_topic: /dataset/camera_info
+    init_mode: topic                 # world frame from the player's first ground-truth pose (z up, floor at 0)
+    classes: [forklift, pallet, cardboard box, pallet truck]
+    floor_classes: [forklift, pallet truck]
+    detect_every: 3
+    depth_max: 6.0
+    map_voxel: 0.05
+    map_sigma_max: 0.15
+    floor_z: 0.0
+    map_extent: 30.0
+    process_all: true                # deterministic demo: process every published frame
+    nbv_every_s: 5.0
+    dashboard_every_s: 30.0
+    output_dir: results/ros_staer

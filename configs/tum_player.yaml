@@ -1,0 +1,16 @@
+# GeoSemTwin-X node fed by ros2/dataset_player.py (dataset:=tum). Handheld camera: no floor -> no NBV.
+geosemtwinx:
+  ros__parameters:
+    rgb_topic: /dataset/rgb
+    depth_topic: /dataset/depth
+    camera_info_topic: /dataset/camera_info
+    init_mode: identity
+    classes: [monitor, keyboard, computer mouse, cup, book, chair, telephone, bottle]
+    floor_classes: [chair]
+    detect_every: 5
+    depth_max: 4.0
+    map_voxel: 0.02
+    map_sigma_max: 0.05
+    process_all: true
+    nbv_every_s: 1000.0
+    output_dir: results/ros_tum

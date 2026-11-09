@@ -1,0 +1,113 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 60
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/Map
+      Name: Traversability
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/traversability
+      Alpha: 0.45
+      Color Scheme: costmap
+      Value: true
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Fused map
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/map
+        Reliability Policy: Reliable
+      Color Transformer: RGB8
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 0
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Assets
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/assets
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: Estimated path
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/path
+      Color: 231; 111; 81
+      Line Style: Billboards
+      Line Width: 0.04
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: Ground-truth path
+      Enabled: true
+      Topic:
+        Value: /dataset/gt_path
+        Durability Policy: Transient Local
+      Color: 42; 157; 143
+      Line Style: Lines
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: NBV path
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/nbv_path
+      Color: 255; 160; 0
+      Line Style: Billboards
+      Line Width: 0.06
+      Value: true
+    - Class: rviz_default_plugins/Pose
+      Name: Next-best view
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/nbv_goal
+      Color: 255; 140; 0
+      Shape: Arrow
+      Shaft Length: 0.8
+      Head Length: 0.3
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Marker Scale: 0.6
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: Detections
+      Enabled: true
+      Topic:
+        Value: /geosemtwinx/annotated
+      Value: true
+  Global Options:
+    Background Color: 245; 246; 248
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 25
+      Pitch: 0.9
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Name: Current View
+      Target Frame: camera_optical
+      Value: Orbit (rviz)
+Window Geometry:
+  Height: 900
+  Width: 1500
